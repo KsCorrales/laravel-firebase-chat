@@ -29,8 +29,9 @@ class AppController extends Controller
         if($receptorUser == null) {
             return view('app.nousernamefinded', compact('userName'));
         }else {
+            $users = User::where('id', '!=', Auth::user()->id)->take(10)->get();
             $chat = $this->hasChatWith($receptorUser->id); 
-            return view('app.chat', compact('receptorUser', 'chat'));
+            return view('app.chat', compact('receptorUser', 'chat', 'users'));
         }
     }
 

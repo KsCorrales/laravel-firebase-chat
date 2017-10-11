@@ -32,18 +32,18 @@
                         <h2 class="ui dividing header">
                             Usuarios: 
                         </h2>
-                        <div class="ui two columns grid cards ">
+                        <div id="app" class="ui two columns grid cards ">
                             @foreach($users as $user)
                                 <div class="card">
                                     <div class="content">
 
                                         @if($user->isNew())
                                             <div class="ui yellow right ribbon label">
-                                                <i class="star icon"></i> New User
+                                                <i class="star icon"></i> Nuevo Usuario
                                             </div>
                                         @else
                                             <div class="ui teal right ribbon label">
-                                                <i class="user circle icon"></i> User
+                                                <i class="user circle icon"></i> Usuario
                                             </div>
                                         @endif
                                         
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="extra content">
                                         <div class="ui">
-                                            <a href="{{route('chat',[$user->username])}}" class="ui fluid basic teal button"><i class="talk outline icon"></i> Chatear</a>
+                                            <a href="{{route('chat', [$user->username])}}" class="ui fluid basic teal button"><i class="talk outline icon"></i> Chatear</a>
                                         </div>
                                     </div>
                                 </div>
