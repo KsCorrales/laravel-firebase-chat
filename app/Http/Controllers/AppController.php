@@ -13,7 +13,7 @@ class AppController extends Controller
     public function index()
     {
         // Get all users except current logged in
-        $users = User::where('id', '!=', Auth::user()->id)->paginate(8);
+        $users = User::where('id', '!=', Auth::user()->id)->orderBy('created_at', 'desc')->paginate(8);
         return view('app.inicio', compact('users'));
     }
 

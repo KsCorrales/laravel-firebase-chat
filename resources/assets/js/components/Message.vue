@@ -87,7 +87,6 @@
                         date: messages[key].date
                     });
                 }
-
                 this.showNotification(this.historyMessages.slice(-1).pop());
                 this.firstLoad = true;
                 //scroll to bottom

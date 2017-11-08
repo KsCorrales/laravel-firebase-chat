@@ -56,5 +56,4 @@
         const database = firebase.database();
     </script>
     <script src="{{ asset('js/myapp.js') }}"></script>
-    
 @endsection

@@ -13,25 +13,23 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('semantic/dist/semantic.min.css') }}">
 
     <style type="text/css">
-    body {
-      background-color: #DADADA;
-    }
-    body > .grid {
-      height: 100%;
-    }
-    .image {
-      margin-top: -100px;
-    }
-    .column {
-      max-width: 450px;
-    }
+        body {
+          background-color: #DADADA;
+        }
+        body > .grid {
+          height: 100%;
+        }
+        .image {
+          margin-top: -100px;
+        }
+        .column {
+          max-width: 450px;
+        }
     </style>
-
-    </script>
 </head>
 <body>
 
-<div id="app" class="ui middle aligned center aligned grid">
+<div id="appRegister" class="ui middle aligned center aligned grid">
   <div class="column">
     <h2 class="ui teal image header">
       <div class="content">
@@ -100,7 +98,7 @@
 <script src="{{ asset('js/myapp.js') }}"></script>
 <script>
     var vm = new Vue({
-        el: '#app',
+        el: '#appRegister',
         data: {
             registerData: {},
             formErrors: null,
